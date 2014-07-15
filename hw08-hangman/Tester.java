@@ -13,12 +13,18 @@ public class Tester {
         new BufferedReader(new InputStreamReader(System.in));
 
 	public static void main(String[] args) {
-        // Change the mode here.
-		play(HangmanState.NORMAL_MODE);
+        System.out.println("choose a mode");
+        
+        int mode = Integer.parseInt(input());
+		
+		
+		
+		
+		play(mode);
 	}
 
 	public static void play(int mode) {
-		HangmanState hangmanState = new HangmanState(load("words.txt"));
+		HangmanState hangmanState = new HangmanState(load("/Users/violethaze/Desktop/15-121/15121/hw08-hangman/words.txt"));
 		while (hangmanState.getFeedbackToUser().contains("-")) {
 			System.out.println(hangmanState);
 			String letter = input();

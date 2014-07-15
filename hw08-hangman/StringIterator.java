@@ -1,7 +1,7 @@
 /**
  * 
- * @author [First Name] [Last Name] <[Andrew ID]>
- * @section [Section Letter]
+ * @author Yichao Xue <yichaox>
+ * @section Section B
  *
  */
 
@@ -22,7 +22,7 @@ public class StringIterator implements Iterator<String> {
 	 * Complete the hasNext() method as indicated in the spec.
 	 */
 	public boolean hasNext() {
-		return true; // remove this line when you're done.
+		return (index != string.length());
 	}
 
 	/**
@@ -31,7 +31,9 @@ public class StringIterator implements Iterator<String> {
      * the current index is valid. 
 	 */
 	public String next() {
-		return null; // remove this line when you're done.
+		String s = String.valueOf(string.charAt(index));
+		index++;
+		return s;
 	}
 
 	// Do not implement this method!
